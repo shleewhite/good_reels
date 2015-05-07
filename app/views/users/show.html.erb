@@ -1,1 +1,15 @@
-<%= @user.name %>, <%= @user.email %>
+<h1><%= @user.name %></h1>
+<p><%= @user.email %></p>
+<%= will_paginate @movies %>
+<div>
+    <% if logged_in? %>
+        <% if @user.movies.any? %>
+          <h3>Movies (<%= @user.movies.count %>)</h3>
+          <ol class="movies">
+            <%= render @movies %>
+          </ol>
+          <%= will_paginate @movies %>
+        <% end %>
+    <% end %>
+</div>
+<%= will_paginate @movies%>

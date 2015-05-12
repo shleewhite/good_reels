@@ -13,6 +13,8 @@
             <%= render 'shared/movie_form' %>
           </section>
         </aside>
+        <h3>Your Movies!</h3>
+        <%= render 'shared/feed' %>
      </div>
 <%else%>
     <p><%= link_to "Let's get this party started!", signup_path %></p>

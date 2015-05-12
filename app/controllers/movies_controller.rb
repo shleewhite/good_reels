@@ -7,6 +7,7 @@ class MoviesController < ApplicationController
           flash[:success] = "You added a movie to your list!"
           redirect_to root_url
         else
+          @feed_items = []
           render 'static_pages/home'
         end
     end
@@ -17,5 +18,12 @@ class MoviesController < ApplicationController
     
     def movie_params
         params.require(:movie).permit(:content)
+    end
+    def logged_in_user
+      unless logged_in?
+        store_location
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
     end
 end

@@ -1,7 +1,10 @@
 class StaticPagesController < ApplicationController
-  def home
-    @movie = current_user.movies.build if logged_in?
-  end
+   def home
+    if logged_in?
+      @movie  = current_user.movies.build
+      @feed_items = current_user.feed.paginate(page: params[:page])
+    end
+   end
 
   def help
   end

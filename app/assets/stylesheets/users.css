@@ -5,4 +5,11 @@
     position: fixed;
     top:0;
     right:0;
+    background-color:#F0FAFF;
+}
+.name, .email{
+    text-align:center;
+}
+h2 {
+    text-align:center;
 }

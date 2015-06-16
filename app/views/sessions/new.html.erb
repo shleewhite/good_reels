@@ -1,8 +1,8 @@
 <% provide(:title, "Log in") %>
-<h1>Log in</h1>
+<h1><%= link_to "Good Reels", "/" %></h1>
+<h2>Log in</h2>
 <div class="h_line"></div>
 <div class="row">
-  <!--<div class="col-md-6 col-md-offset-3">-->
     <fieldset>
     <%= form_for(:session, url: login_path) do |f| %>
       <p>
@@ -23,5 +23,4 @@
     <% end %>
     </fieldset>
     <p class="small_text">New user? <%= link_to "Sign up now!", signup_path %></p>
-  <!--</div>-->
 </div>

@@ -1,6 +1,6 @@
 <h1><%= link_to "Good Reels", "/" %></h1>
-<h2><%= @user.name %></h2>
-<p><%= @user.email %></p>
+<h2 class="name"><%= @user.name %></h2>
+<p class="email"><%= @user.email %></p>
 <%= will_paginate @movies %>
 <div>
     <% if logged_in? %>

@@ -1,7 +1,7 @@
 <%= form_for (@movie) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_field :content, placeholder: "Add a new movie!" %>
+  <div>
+    <input id="movie_content" name="movie[content]" placeholder="Add a new movie!" type="text" class="field">
+    <input class="btn btn-primary" name="commit" type="submit" value="Post">
   </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

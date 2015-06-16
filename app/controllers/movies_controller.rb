@@ -11,11 +11,6 @@ class MoviesController < ApplicationController
           render 'home'
         end
     end
-    def destroy
-      User.find(params[:movie]).destroy
-      flash[:success] = "Movie deleted"
-      redirect_to 'home'
-    end
     
     private
     

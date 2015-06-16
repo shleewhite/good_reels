@@ -1,21 +1,27 @@
-<h1>Good Reels</h1>
-<p>Remember All the Movies You Watch!</p>
+<head>
+  <link rel="stylesheet" type="text/css" href="movies.css">
+</head>
+
+<div class="page_header">
+<h1><%= link_to "Good Reels", "/" %></h1>
+<p class="sub_header">Remember All the Movies You Watch!</p>
+</div>
 <% if logged_in? %>
-    <p><%= link_to "Log out", logout_path, method: :delete %></p>
-    <p><%= link_to "Settings", edit_user_path(current_user) %></p>
-    <p><%= link_to "Delete Account", current_user, method: :delete, data: { confirm: "You sure?" } %></p>
-    <div class="row">
         <aside class="col-md-4">
           <section class="user_info">
             <%= render 'shared/user_info' %>
           </section>
+          <div style="position:fixed; margin-right:auto; margin-left:auto">
+            <div class="top_buttons"><%= link_to "Log out |", logout_path, method: :delete %></div>
+            <div class="top_buttons"><%= link_to "Settings |", edit_user_path(current_user) %></div>
+            <div class="top_buttons"><%= link_to "Delete Account", current_user, method: :delete, data: { confirm: "You sure?" } %></div>
+          </div>
           <section class="shared/movie_form">
             <%= render 'shared/movie_form' %>
           </section>
         </aside>
         <h3>Your Movies!</h3>
         <%= render 'shared/feed' %>
-     </div>
 <%else%>
     <p><%= link_to "Let's get this party started!", signup_path %></p>
     <p><%= link_to "Already have an account?", login_path %></p>

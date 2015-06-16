@@ -3,8 +3,6 @@
   <span class="content"><%= movie.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(movie.created_at) %> ago.
-    <% if current_user?(micropost.user) %>
-      <%= link_to "delete", micropost, method: :delete, data: { confirm: "You sure?" } %>
-    <% end %>
+  <%= link_to "delete", movie, method: :delete, data: { confirm: "You sure?" } %>
   </span>
 </li>

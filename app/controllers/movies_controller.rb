@@ -2,13 +2,13 @@ class MoviesController < ApplicationController
     before_action :logged_in_user, only: [:create, :destroy]
     
     def create
-        @movie = current_user.movie.build(movie_params)
+        @movie = current_user.movies.build(movie_params)
         if @movie.save
           flash[:success] = "You added a movie to your list!"
-          redirect_to root_url
+          redirect_to 'home'
         else
           @feed_items = []
-          render 'static_pages/home'
+          render 'home'
         end
     end
     def destroy

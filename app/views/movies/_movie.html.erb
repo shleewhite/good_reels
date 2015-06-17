@@ -1,7 +1,7 @@
 <li id="movie-<%= movie.id %>">
-  <span class="user"><%= link_to movie.user.name, movie.user %></span>
   <span class="content"><%= movie.content %></span>
+  <span class="rating"><%= movie.rating %></span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(movie.created_at) %> ago.
+    posted <%= time_ago_in_words(movie.created_at) %> ago.
   </span>
 </li>

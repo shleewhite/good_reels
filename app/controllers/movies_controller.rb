@@ -5,10 +5,10 @@ class MoviesController < ApplicationController
         @movie = current_user.movies.build(movie_params)
         if @movie.save
           flash[:success] = "You added a movie to your list!"
-          redirect_to 'home'
+          redirect_to '/'
         else
           @feed_items = []
-          render 'home'
+          render '/'
         end
     end
     

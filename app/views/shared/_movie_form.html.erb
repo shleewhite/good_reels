@@ -1,10 +1,16 @@
 <%= form_for (@movie) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div style="width:50%; padding-left: 37%; padding-top: 20px">
+  <div>
     <fieldset class="movie-form">
-      <input id="movie_content" name="movie[content]" placeholder="Add a new movie!" type="text" class="field">
-      <input id="rating" name="movie[rating]" placeholder="0" type="number" max="5">
-      <input class="btn btn-primary" name="commit" type="submit" value="Post">
+      <p>Movie Title: </p>
+      <input id="movie_content" name="movie[content]" type="text" class="field">
+  	  <br>
+      <p style="padding-right:35px">Rating: </p>
+      <input id="movie_rating" name="movie[rating]" placeholder="0" type="number" max="5" min="0">
+	    <br>
+	    <div style="margin-left:6.2em">
+      	<input class="btn btn-primary" name="commit" type="submit" value="Add">
+      </div>
     </fieldset>
   </div>
 <% end %>

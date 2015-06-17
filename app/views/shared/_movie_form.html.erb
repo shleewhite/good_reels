@@ -2,13 +2,13 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div>
     <fieldset class="movie-form">
-      <p>Movie Title: </p>
+      <p>Movie Title</p>
       <input id="movie_content" name="movie[content]" type="text" class="field">
-  	  <br>
-      <p style="padding-right:35px">Rating: </p>
-      <input id="movie_rating" name="movie[rating]" placeholder="0" type="number" max="5" min="0">
-	    <br>
-	    <div style="margin-left:6.2em">
+      <div style="padding-left:35px">
+        <p>Rating</p>
+        <input id="movie_rating" name="movie[rating]" type="number" max="5" min="0">
+      </div>
+	    <div style="padding-left:92px">
       	<input class="btn btn-primary" name="commit" type="submit" value="Add">
       </div>
     </fieldset>

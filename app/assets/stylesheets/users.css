@@ -4,7 +4,7 @@
     border: 1px solid #CCD6EB;
     position: fixed;
     top:0;
-    right:0;
+    right:10px;
     background-color:#F0FAFF;
 }
 .name, .email, h2, p{

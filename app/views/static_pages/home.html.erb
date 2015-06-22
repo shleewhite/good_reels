@@ -23,6 +23,9 @@
         <h3>Your Movies!</h3>
         <%= render 'shared/feed' %>
 <%else%>
-    <p style="display:block"><%= link_to "Let's get this party started!", signup_path %></p>
-    <p style="display:block"><%= link_to "Already have an account?", login_path %></p>
+    <fieldset>
+      <p style="display:block"><%= link_to "Let's get this party started!", signup_path %></p>
+      <p style="display:block"><%= link_to "Already have an account?", login_path %></p>
+    </fieldset>
+
 <%end%>
